@@ -23,6 +23,8 @@ import static utils.DirPathUtils.concatenateValidInputsPath;
 
 public class MoveSequenceTest {
 
+
+
     private static MovesVerificator getMovesVerificatorFromFile(String inputFilePath){
 
         InputFileParser parser = new InputFileParser();
@@ -61,6 +63,15 @@ public class MoveSequenceTest {
     @Test
     public void test_incorrect_sequence() {
         String inputFilePath = concatenateValidInputsPath(INCORRECT_SEQUENCE_TXT);
+        MovesVerificator movesVerificator = getMovesVerificatorFromFile(inputFilePath);
+        boolean result = movesVerificator.verifySequences();
+
+        Assert.assertEquals(result, false);
+    }
+
+    @Test
+    public void test_moving_from_empty_rod() {
+        String inputFilePath = concatenateValidInputsPath(MOVING_FROM_EMPTY_ROD_TXT);
         MovesVerificator movesVerificator = getMovesVerificatorFromFile(inputFilePath);
         boolean result = movesVerificator.verifySequences();
 

@@ -13,6 +13,7 @@ public final class Constants {
     public static final String INVALID_INPUTS_DIR = "invalid_inputs";
     public static final String SRC_TEST_RESOURCES = "src/test/resources";
 
+    public static final String MOVING_FROM_EMPTY_ROD_TXT = "moving_from_empty_rod.txt";
     public static final String EMPTY_FILE_TXT = "empty_file.txt";
     public static final String ILLEGAL_CHAR_INPUT_TXT = "illegal_char_input.txt";
     public static final String NEGETIVE_WEIGHT_NUMBER_INPUT_TXT = "negetive_weight_number_input.txt";

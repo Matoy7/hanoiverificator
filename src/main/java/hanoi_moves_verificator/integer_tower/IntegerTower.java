@@ -45,6 +45,10 @@ public class IntegerTower implements Tower<Integer> {
 
         Disk<Integer> pushedDisk = sourceRod.peekFirstDisk();
 
+        if (pushedDisk==null){
+            return false;
+        }
+
         if (destRod.isPlaceDiskPossible(pushedDisk)){
             sourceRod.popFirstDisk();
             destRod.placeDisk(pushedDisk);

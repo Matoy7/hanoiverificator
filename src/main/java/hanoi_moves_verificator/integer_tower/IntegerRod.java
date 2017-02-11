@@ -28,6 +28,9 @@ public class IntegerRod implements Rod<Integer> {
 
     @Override
     public Disk<Integer> peekFirstDisk() {
+        if (disks.empty()) {
+            return null;
+        }
         return disks.peek();
     }
 
